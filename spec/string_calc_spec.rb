@@ -26,5 +26,9 @@ RSpec.describe StringCalc do
     it 'handles newlines as delimiters' do
       expect(input_value.add("1\n2  ,3")).to eq(6)
     end
+
+    it 'handles multiple newlines as delimiters' do
+      expect(input_value.add("1\n2\n3")).to eq(6)
+    end
   end
 end
