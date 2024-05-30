@@ -14,5 +14,9 @@ RSpec.describe StringCalc do
     it 'return 0 for empty string' do
       expect(input_value.add('')).to eq(0)
     end
+
+    it 'return the same number if has input seprated by commas' do
+      expect(input_value.add('1, 2, 3, 4, 5')).to eq(15)
+    end
   end
 end
