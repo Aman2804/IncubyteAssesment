@@ -37,6 +37,8 @@ RSpec.describe StringCalc do
 
     it 'changes of delimiter at the beginning of the string' do
       expect(input_value.add("//;\n1;2")).to eq(3)
+      expect(input_value.add("//*\n1\n2*3\n4")).to eq(10)
+      expect(input_value.add("//#\n1\n2#5")).to eq(8)
     end
   end
 end
