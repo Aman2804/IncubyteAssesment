@@ -18,5 +18,9 @@ RSpec.describe StringCalc do
     it 'return the same number if has input seprated by commas' do
       expect(input_value.add('1, 2, 3, 4, 5')).to eq(15)
     end
+
+    it 'return the same number if has single input' do
+      expect(input_value.add('7')).to eq(7)
+    end
   end
 end
