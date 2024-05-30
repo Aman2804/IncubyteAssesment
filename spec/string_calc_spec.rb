@@ -34,5 +34,9 @@ RSpec.describe StringCalc do
     it 'raises ArgumentError for invalid input with a comma followed by a newline' do
       expect { input_value.add("1,\n2") }.to raise_error(ArgumentError)
     end
+
+    it 'changes of delimiter at the beginning of the string' do
+      expect(input_value.add("//;\n1;2")).to eq(3)
+    end
   end
 end
