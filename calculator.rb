@@ -29,6 +29,8 @@ module StringCalculator
 
     def validate_array(numbers)
       raise ArgumentError, 'Invalid Input' if numbers&.any?(&:empty?)
+      negatives = numbers&.select { |num| num.to_i.negative? }
+      raise ArgumentError, "Negative numbers are not allowed: #{negatives.join(', ')}" if negatives&.any?
     end
   end
 end
