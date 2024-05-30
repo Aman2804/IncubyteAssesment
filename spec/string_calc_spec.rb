@@ -30,5 +30,9 @@ RSpec.describe StringCalc do
     it 'handles multiple newlines as delimiters' do
       expect(input_value.add("1\n2\n3")).to eq(6)
     end
+
+    it 'raises ArgumentError for invalid input with a comma followed by a newline' do
+      expect { input_value.add("1,\n2") }.to raise_error(ArgumentError)
+    end
   end
 end
