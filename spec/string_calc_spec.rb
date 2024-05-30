@@ -22,5 +22,9 @@ RSpec.describe StringCalc do
     it 'return the same number if has single input' do
       expect(input_value.add('7')).to eq(7)
     end
+
+    it 'handles newlines as delimiters' do
+      expect(input_value.add("1\n2  ,3")).to eq(6)
+    end
   end
 end

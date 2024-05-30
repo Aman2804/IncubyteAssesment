@@ -11,7 +11,7 @@ module StringCalculator
 
     def split_string(string)
       numbers = string.delete(' ')
-      numbers.split(',')
+      numbers&.split(/|,|\n/)
     end
   end
 end
