@@ -1,3 +1,4 @@
+require_relative '../main'
 
 RSpec.describe StringCalc do
 
